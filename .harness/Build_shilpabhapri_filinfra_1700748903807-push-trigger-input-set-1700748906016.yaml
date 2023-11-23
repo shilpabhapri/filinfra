@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_shilpabhapri_filinfra_1700748903807-push-trigger-input-set
+  identifier: Build_shilpabhapri_filinfra_1700748903807pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: fistest
+  pipeline:
+    identifier: Build_shilpabhapri_filinfra_1700748903807
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
