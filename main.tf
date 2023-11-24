@@ -1,4 +1,4 @@
 resource "azurerm_resource_group" "rg" {
-  name     = "filrg"
+  name     = "rg-FIS"
   location = "East US"
 }
