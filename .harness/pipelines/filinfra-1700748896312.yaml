@@ -40,9 +40,9 @@ pipeline:
                       terraform init
                       terraform plan
           platform:
-            os: Windows
+            os: Linux
             arch: Amd64
           runtime:
-            type: Docker
+            type: Cloud
             spec: {}
         type: CI
