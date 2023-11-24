@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_shilpabhapri_filinfra_1700748903807-pr-trigger-input-set
+  identifier: Build_shilpabhapri_filinfra_1700748903807prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: fistest
+  pipeline:
+    identifier: Build_shilpabhapri_filinfra_1700748903807
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>

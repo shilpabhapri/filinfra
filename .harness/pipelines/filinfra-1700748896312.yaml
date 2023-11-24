@@ -1,0 +1,55 @@
+pipeline:
+  identifier: Build_shilpabhapri_filinfra_1700748903807
+  name: Build filinfra
+  orgIdentifier: default
+  projectIdentifier: fistest
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.Github
+        repoName: shilpabhapri/filinfra
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: echo
+                  name: echo
+                  spec:
+                    command: echo hello world
+                  timeout: ""
+                  type: Run
+              - step:
+                  type: GitClone
+                  name: GitClone_1
+                  identifier: GitClone_1
+                  spec:
+                    connectorRef: account.Github
+                    repoName: filinfra
+                    build:
+                      type: branch
+                      spec:
+                        branch: main
+                  description: pulling the code from Git
+              - step:
+                  type: Run
+                  name: Run_2
+                  identifier: Run_2
+                  spec:
+                    shell: Sh
+                    command: |-
+                      az login
+                      terraform init
+                      terraform plan
+          platform:
+            os: Windows
+            arch: Amd64
+          runtime:
+            type: Docker
+            spec: {}
+        type: CI
