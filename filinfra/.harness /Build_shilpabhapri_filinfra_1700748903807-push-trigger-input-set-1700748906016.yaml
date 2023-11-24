@@ -1,0 +1,14 @@
+inputSet:
+  pipeline:
+    identifier: Build_shilpabhapri_filinfra_1700748903807
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
+  name: hareness-test
+  identifier: harenesstest
+  orgIdentifier: default
+  projectIdentifier: fistest
